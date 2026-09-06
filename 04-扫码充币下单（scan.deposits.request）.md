@@ -29,6 +29,8 @@
   "version":"01", 
   "reqSn":"483511700644932447" 
 }
+```
+
 ### 响应报文(业务参数定义)
 
 | 节点名 | 字段名称 | 可空 | 类型 | 备注 |
@@ -49,6 +51,8 @@
 | `retCode 为其它情况` | 代表商户扫码充币下单失败 |
 
 响应报文示例
+
+```json
 { 
   "transCode": "scan.deposits.request", 
   "version": "01", 
@@ -59,3 +63,4 @@
   "data": "{\"merchOrderNo\":\"7984755206\",\"merchUid\":48351,\"orderAmt\":63.18,\"remark\":\"请求成功\",\"url\":\"[http://127.0.0.1:19010/home?param=eyJuYW1lIjoi5Zyw5ZyoIiwib3JkZXJBbXQiOiI2My4xOCIsInR5cGUiOiIzMSIsImtleSI6IjNjOTFiNjIyOWE4NDRhMDgyYTM4NmFlNDYxYzBiOGE2In0=](http://127.0.0.1:19010/home?param=eyJuYW1lIjoi5Zyw5ZyoIiwib3JkZXJBbXQiOiI2My4xOCIsInR5cGUiOiIzMSIsImtleSI6IjNjOTFiNjIyOWE4NDRhMDgyYTM4NmFlNDYxYzBiOGE2In0=)\",\"userName\":\"地在\",\"userNo\":\"20241010\"}", 
   "signMsg": "eH/M3vkQz4z9E71yWcQQPhPdgSlsSTfgkvdXLLF5K4boBelLArDRbJO126relXZ28cHLYSzJ40nz1VWwuLE6nvSNwYpLBVvDewrb3oik+4g4E+EKYD71L34JURV8hEY4l6d7X7t/EUSXWvympn9Qrwxd8fSEgiPl8gBChT06kRVabsK4yqa1WAe2A/VB5J57cyTjxsgNDZH0k5ZquK8o1t8vlvGYVjkcbjANGbn2cIJGLukVxt/9nDMJItgX28aiBdyVyUSIrLamg3uWYMXXosjg1TFe99r5ui4Sjrr6dn2YzEXPiArKJEn6DVf3pf0Ga0zW5krTQYQYHI0LixYctw==" 
 }
+```
