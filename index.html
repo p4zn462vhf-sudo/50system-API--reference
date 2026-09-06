@@ -8,10 +8,21 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   
   <style>
-    /* 强制代码块和文本自动换行，避免产生横向滚动条 */
+    /* 强制代码块和文本自动换行 */
     pre, code, p, section {
       white-space: pre-wrap !important;
       word-break: break-all !important;
+    }
+
+    /* ====== 彻底干掉左侧边栏，页面居中全宽展示 ====== */
+    aside.sidebar, .sidebar-toggle {
+      display: none !important;
+    }
+    section.content {
+      left: 0 !important;
+      max-width: 900px !important;
+      margin: 0 auto !important;
+      padding: 30px !important;
     }
   </style>
 </head>
@@ -20,7 +31,8 @@
   <script>
     window.$docsify = {
       name: 'xq6钱包接口文档',
-      loadSidebar: false, // 关闭左侧边栏，页面直接呈现文件内容
+      loadSidebar: false,
+      subMaxLevel: 0, // 设为0，禁止抓取正文标题生成侧边栏
       // 全局搜索插件配置
       search: {
         placeholder: '搜索接口或参数...',
