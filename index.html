@@ -8,21 +8,53 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   
   <style>
-    /* 强制代码块和文本自动换行 */
-    pre, code, p, section {
-      white-space: pre-wrap !important;
-      word-break: break-all !important;
-    }
-
-    /* ====== 彻底干掉左侧边栏，页面居中全宽展示 ====== */
-    aside.sidebar, .sidebar-toggle {
+    /* 彻底隐藏侧边栏与侧边栏开关按钮 */
+    aside.sidebar, 
+    .sidebar-toggle {
       display: none !important;
     }
+
+    /* 宽度与版心扩展 */
     section.content {
+      position: static !important;
       left: 0 !important;
-      max-width: 900px !important;
+      max-width: 1280px !important;
       margin: 0 auto !important;
-      padding: 30px !important;
+      padding: 20px 40px 60px !important;
+    }
+
+    .markdown-section {
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 auto !important;
+    }
+
+    /* 表格自适应与防挤压 */
+    .markdown-section table {
+      display: table !important;
+      width: 100% !important;
+      margin: 16px 0 24px !important;
+      table-layout: auto !important;
+    }
+
+    .markdown-section th, 
+    .markdown-section td {
+      padding: 10px 14px !important;
+      white-space: nowrap; /* 字段名、类型等短文本不折行 */
+    }
+
+    .markdown-section td:last-child {
+      white-space: normal !important; /* 备注列自动换行 */
+      word-break: break-word !important;
+    }
+
+    /* 代码块与文本换行 */
+    pre, code, p, section {
+      word-break: break-word !important;
+    }
+
+    pre code {
+      white-space: pre !important; /* 保留代码块原生缩进，避免 JSON 结构错乱 */
     }
   </style>
 </head>
@@ -32,12 +64,16 @@
     window.$docsify = {
       name: 'xq6钱包接口文档',
       loadSidebar: false,
-      subMaxLevel: 0, // 设为0，禁止抓取正文标题生成侧边栏
-      // 全局搜索插件配置
+      subMaxLevel: 0,
       search: {
         placeholder: '搜索接口或参数...',
         noData: '未找到相关结果',
         depth: 3
+      },
+      copyCode: {
+        buttonText: '复制',
+        errorText: '错误',
+        successText: '已复制'
       }
     }
   </script>
