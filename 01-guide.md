@@ -146,9 +146,9 @@ if(!verifySign(retDto, signMsg, "平台公钥")){
 
 注：商户购买查询、商户出售查询、商户账户查询使用查询类请求地址，其它接口使用API类请求地址
 
-查询类请求地址：访问域名+/merch/query
+查询类请求地址：访问域名+/merch/50query
 
-API类请求地址：访问域名+/merch/api
+API类请求地址：访问域名+/merch/50api
 
 2.4 通知地址
 1） 交易下单时上送notify_url;交易完成后，将会根据此地址进行结果通知
