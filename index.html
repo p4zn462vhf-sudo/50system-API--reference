@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   
   <style>
-    /* 强制超出宽度时自动换行，避免移动端横向滚动条 */
+    /* 强制代码块和文本自动换行，避免产生横向滚动条 */
     pre, code, p, section {
       white-space: pre-wrap !important;
       word-break: break-all !important;
@@ -20,8 +20,7 @@
   <script>
     window.$docsify = {
       name: 'xq6钱包接口文档',
-      loadSidebar: true,
-      subMaxLevel: 2,
+      loadSidebar: false, // 关闭左侧边栏，页面直接呈现文件内容
       // 全局搜索插件配置
       search: {
         placeholder: '搜索接口或参数...',
